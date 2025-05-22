@@ -17,7 +17,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
 }
 
 /* Navbar Styles */
@@ -134,6 +133,68 @@ body {
   font-size: 2rem;
   margin-right: 1.5rem;
   color: var(--bg);
+}
+
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  background-color: #fff;
+  padding: 0.1rem;
+  color: var(--bg);
+  transition: 0.3s;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+
+.shopping-cart img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.shopping-cart h3 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .harga {
+  font-size: 1.2rem;
+}
+
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+  color: var(--primary);
+}
+
+#shopping-cart-button[data-count]:after {
+  content: attr(data-count);
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
 }
 
 /* Hero Section */
@@ -322,7 +383,15 @@ body {
 }
 
 .btn22:hover {
-  background-color: #e68a00;
+  color: #e68a00;
+}
+
+.row .product-star1 .star-full,
+.row .product-star2 .star-full,
+.row .product-star3 .star-full,
+.row .product-star4 .star-full {
+  color: var(--primary);
+  fill: var(--primary);
 }
 
 /* Contact Section */
@@ -380,6 +449,46 @@ body {
 
 .contact .row form button:hover {
   background-color: #e68a00;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .sosials {
+  padding: 1rem 0;
+}
+
+footer .sosials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .sosials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
 
 /* Feather Icons Style */
