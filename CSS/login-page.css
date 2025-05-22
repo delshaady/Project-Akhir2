@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: var(--light-gray);
+    background-color: var(--secondary);
     color: var(--secondary);
     line-height: 1.6;
 }
@@ -84,6 +84,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+}
+
+.login-right .login-form-container h2 span {
+    color: var(--primary);
 }
 
 .login-form-container {

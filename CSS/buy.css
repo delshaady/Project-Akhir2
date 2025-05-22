@@ -48,7 +48,7 @@
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
-    font-style: italic;
+    font-family: 'Poppins', sans-serif;
   }
   
   .navbar-logo span {
@@ -140,7 +140,6 @@ section {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    
     position: relative;
   }
   
