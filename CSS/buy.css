@@ -136,22 +136,6 @@ section {
     background-color: #f8f9fa;
   }
   
-  section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    position: relative;
-  }
-  
-  section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary);
-    margin: 1rem auto 0;
-  }
-  
   .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +143,8 @@ section {
     margin-top: 3rem;
   }
   
-  .menu-card {
+  .menu-card,
+  .shopping-cart {
     background: white;
     border-radius: 10px;
     overflow: hidden;

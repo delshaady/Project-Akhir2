@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dthrift Outfit - Profile</title>
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-group">
+            <img src="../img/nav-logo2.png" alt="Dthrift Logo" class="navlog">
+            <a href="../HTML/landing-page.html" class="navbar-logo">Dthrift <span>Outfit</span></a>
+        </div>
+
+        <div class="navbar-nav">
+            <a href="../HTML/landing.html">Home</a>
+            <a href="../HTML/shop.html">Shop</a>
+            <a href="../HTML/profile.html" class="active">Profile</a>
+            <a href="../HTML/about.html">About</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+      <!-- Search Form -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="Search here...">
+        <label for="search-box"><i class="fas fa-search"></i></label>
+    </div>
+
+        <!-- Shopping Cart -->
+        <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="../img/Baju/baju distro.jpg" alt="Product 1">
+                <div class="item-detail">
+                    <h3>Jaket Vintage</h3>
+                    <div class="harga">Rp100.000</div>
+                </div>
+                <i class="fas fa-times remove-item"></i>
+            </div>
+            <a href="#" class="btn22" style="display: block; text-align: center; margin: 2rem auto;">Checkout</a>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../img/profile-user.jpg" alt="User Avatar">
+                    <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                </div>
+                <h1>John Doe</h1>
+                <p class="member-since">Member since January sultan</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Orders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                    <button class="tab-btn" data-tab="orders">My Orders</button>
+                    <button class="tab-btn" data-tab="address">Address Book</button>
+                    <button class="tab-btn" data-tab="wishlist">Wishlist</button>
+                </div>
+
+                <div class="tab-content active" id="personal">
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" value="Dthrift">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="admin@dhtrift.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="+628123456789">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Birth Date</label>
+                            <input type="date" id="birthdate" value="1990-01-15">
+                        </div>
+                        <button type="submit" class="btn22">Update Profile</button>
+                    </form>
+                </div>
+
+                <div class="tab-content" id="orders">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <span class="order-id">Order #DT-2023-001</span>
+                            <span class="order-date">Jan 15, 2023</span>
+                            <span class="order-status completed">Completed</span>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="../img/Baju/baju distro.jpg" alt="Product">
+                                <div class="item-info">
+                                    <h4>Jaket Vintage</h4>
+                                    <p>Quantity: 1</p>
+                                    <p>Rp100.000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="order-total">Total: Rp100.000</span>
+                            <button class="btn22">Reorder</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="address">
+                    <div class="address-card">
+                        <div class="address-header">
+                            <h4>Primary Address</h4>
+                            <button class="edit-address"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <p class="address-detail">
+                            John Doe<br>
+                            123 Fashion Street<br>
+                            Jakarta 12345<br>
+                            Indonesia<br>
+                            Phone: +628123456789
+                        </p>
+                        <button class="btn22" style="margin-top: 1rem;">Add New Address</button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="wishlist">
+                    <div class="wishlist-grid">
+                        <div class="wishlist-item">
+                            <img src="../img/Baju/baju distro.jpg" alt="Product">
+                            <h4>Jaket Vintage</h4>
+                            <p>Rp100.000</p>
+                            <div class="wishlist-actions">
+                                <button class="wishlist-btn"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="wishlist-btn remove"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="sosials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="links">
+            <a href="../HTML/landing.html">Home</a>
+            <a href="../HTML/shop.html">Shop</a>
+            <a href="../HTML/about.html">About</a>
+            <a href="../HTML/contact.html">Contact</a>
+        </div>
+        <div class="credit">
+            <p>Created by <a href="#">DthriftTeam</a>. | &copy; 2023.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js/profile.js"></script>
+</body>
+</html>

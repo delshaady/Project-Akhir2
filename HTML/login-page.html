@@ -26,7 +26,7 @@
                 <h2><span>Login Terlebih</span> Dahulu</h2>
                 <p class="form-subtitle">Silakan masuk menggunakan akun Anda</p>
                 
-                <form class="login-form" action="#" method="POST">
+                <form class="login-form" id="loginForm" action="#" method="POST">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <div class="input-with-icon">
@@ -34,7 +34,6 @@
                             <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
                         </div>
                     </div>
-                    
                     <div class="form-group">
                         <label for="password">Password</label>
                         <div class="input-with-icon">
@@ -43,7 +42,7 @@
                             <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
                         </div>
                     </div>
-                    
+                
                     <div class="form-options">
                         <div class="remember-me">
                             <input type="checkbox" id="remember" name="remember">
@@ -51,48 +50,17 @@
                         </div>
                         <a href="#" class="forgot-password">Lupa password?</a>
                     </div>
-                    
-                    <a href="../HTML/beli.html" class="login-btn" style="text-decoration: none;">
-                        Masuk
-                    </a>
-                    
-                    <div class="social-login">
-                        <p>Atau masuk dengan</p>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
-                            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    
+                
+                    <button type="submit" class="login-btn">Masuk</button>
+
                     <div class="register-link">
                         Belum punya akun? <a href="../HTML/register-page.html">Daftar sekarang</a>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>
-
-    <script>
-        function togglePassword() {
-            const password = document.getElementById('password');
-            const icon = document.querySelector('.toggle-password');
-            
-            if (password.type === 'password') {
-                password.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
-            } else {
-                password.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            }
-        }
-    </script>
-
-    <!-- Feather Icons -->
-    <script>
-        feather.replace();
-    </script>
+    <script src="../script.js/login.js"></script>
 </body>
 </html>

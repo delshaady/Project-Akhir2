@@ -116,6 +116,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // script.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Fungsi untuk toggle password visibility
+  function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.querySelector('.toggle-password');
+      
+      if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+      } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.remove('fa-eye-slash');
+          toggleIcon.classList.add('fa-eye');
+      }
+  }
+
+  // Menambahkan event listener ke tombol toggle password
+  const togglePasswordBtn = document.querySelector('.toggle-password');
+  if (togglePasswordBtn) {
+      togglePasswordBtn.addEventListener('click', togglePassword);
+  }
+
+  // Fungsi untuk validasi form
+  function validateForm(event) {
+      event.preventDefault(); // Mencegah form submit default
+      
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      
+      // Validasi email
+      if (!email) {
+          alert('Silakan masukkan email Anda');
+          return;
+      }
+      
+      // Validasi format email sederhana
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+          alert('Format email tidak valid');
+          return;
+      }
+      
+      // Validasi password
+      if (!password) {
+          alert('Silakan masukkan password Anda');
+          return;
+      }
+      
+      // Jika semua validasi berhasil, redirect ke halaman beli.html
+      window.location.href = '../HTML/beli.html';
+  }
+
+  // Menambahkan event listener ke form login
+  const loginForm = document.querySelector('.login-form');
+  if (loginForm) {
+      loginForm.addEventListener('submit', validateForm);
+  }
+
+  // Menambahkan event listener ke tombol login (untuk backup)
+  const loginBtn = document.querySelector('.login-btn');
+  if (loginBtn) {
+      loginBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          validateForm(e);
+      });
+  }
+});
   // ======================
   // INITIALIZE FEATHER ICONS
   // ======================
