@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Show success and redirect
           alert("Login successful! Redirecting...");
-          window.location.href = "../HTML/beli.html";
+          window.location.href = "../HTML/baju.html";
         } else {
           alert("Invalid email or password");
           loginBtn.innerHTML = originalText;
